@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Menu } from './models/menu';
-import { ComponentRootComponent } from './component-root/component-root.component';
+import { ComponentRootComponent } from './pages/component-root/component-root.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +19,9 @@ export class AppComponent {
       children: [{
         title: 'Componente del modulo raiz',
         path: 'componente-raiz'
+      },{
+        title: 'Componente de un modulos externos',
+        path: 'componente-externo'
       }
       ]
     }
