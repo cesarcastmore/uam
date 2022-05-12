@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Menu } from './models/menu';
-import { ComponentRootComponent } from './pages/component-root/component-root.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +21,9 @@ export class AppComponent {
       },{
         title: 'Componente de un modulos externos',
         path: 'componente-externo'
+      },{
+        title: 'Componente de un modulo NPM',
+        path: 'componente-npm'
       }
       ]
     }
