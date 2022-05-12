@@ -24,6 +24,9 @@ export class AppComponent {
       },{
         title: 'Componente de un modulo NPM',
         path: 'componente-npm'
+      }, {
+        title:'Componente de carga retardada',
+        path: 'lazy-loading'
       }
       ]
     }

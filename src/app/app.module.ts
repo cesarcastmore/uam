@@ -8,19 +8,22 @@ import { AlertasModule } from './alertas/alertas.module';
 import { ExternalComponentComponent } from './pages/external-component/external-component.component';
 import { NpmComponentComponent } from './pages/npm-component/npm-component.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentRootComponent,
     ExternalComponentComponent,
-    NpmComponentComponent
+    NpmComponentComponent, 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AlertasModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

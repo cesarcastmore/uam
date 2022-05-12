@@ -13,7 +13,9 @@ const routes: Routes = [{
 }, {
   path: 'componente-npm',
   component: NpmComponentComponent
-}];
+},
+  { path: 'lazy-loading', 
+  loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
