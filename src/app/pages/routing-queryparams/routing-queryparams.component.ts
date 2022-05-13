@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-routing-queryparams',
@@ -8,12 +10,21 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class RoutingQueryparamsComponent implements OnInit {
 
-  constructor(private activedRoute: ActivatedRoute) { }
+  constructor(private activedRoute: ActivatedRoute,
+    private categoryService: CategoryService) { }
 
   ngOnInit(): void {
 
     let category: string = this.activedRoute.snapshot.queryParams['category'];
     console.log(category);
+
+    let categories$: Observable<any>= this.categoryService.getAllCategories();
+
+    categories$.subscribe(categories=> {
+      console.log(categories);
+    })
+
+
   }
 
 }

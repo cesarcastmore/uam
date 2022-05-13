@@ -15,6 +15,9 @@ import { CssComponent } from './pages/routing-children/css/css.component';
 import { JavascriptComponent } from './pages/routing-children/javascript/javascript.component';
 import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing-queryparams.component';
 
+
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,8 @@ import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing
     AppRoutingModule,
     AlertasModule,
     ModalModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url: 'https://api.api2cart.com/v1.1',
+  apiKey:'fa37fc6f38cb8c30cfe484b6eec68c21',
+  apiStoreKey:'ed58a22dfecb405a50ea3ea56979360d'
 };
 
 /*
