@@ -35,8 +35,12 @@ export class AppComponent {
       children: [{
         title: 'Rutas Anidadas',
         path:'rutas-anidadas'
+      },{
+        title: 'Parametros de Consulta',
+        path: 'parametros-consulta'
       }]
     }
+
 
   ];
 

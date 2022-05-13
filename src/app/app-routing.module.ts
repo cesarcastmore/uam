@@ -5,6 +5,14 @@ import { ExternalComponentComponent } from './pages/external-component/external-
 import { NpmComponentComponent } from './pages/npm-component/npm-component.component';
 import { RoutingChildrenComponent } from './pages/routing-children/routing-children.component';
 
+
+import { HtmlComponent } from './pages/routing-children/html/html.component';
+import { CssComponent } from './pages/routing-children/css/css.component';
+import { JavascriptComponent } from './pages/routing-children/javascript/javascript.component';
+import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing-queryparams.component';
+
+
+
 const routes: Routes = [{
   path: 'componente-raiz',
   component: ComponentRootComponent
@@ -20,7 +28,21 @@ const routes: Routes = [{
   loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)
 }, {
   path: 'rutas-anidadas',
-  component: RoutingChildrenComponent
+  component: RoutingChildrenComponent,
+  children: [{
+    path: 'html',
+    component: HtmlComponent
+  }, {
+    path: 'css',
+    component: CssComponent
+  }, {
+    path: 'javascript',
+    component: JavascriptComponent
+  }],
+},{
+  path: 'parametros-consulta',
+  component: RoutingQueryparamsComponent
+
 }
 
 
