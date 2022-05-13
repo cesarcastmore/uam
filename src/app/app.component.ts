@@ -29,6 +29,13 @@ export class AppComponent {
         path: 'lazy-loading'
       }
       ]
+    },{
+      title: 'Rutas',
+      key: 'rutas',
+      children: [{
+        title: 'Rutas Anidadas',
+        path:'rutas-anidadas'
+      }]
     }
 
   ];

@@ -9,13 +9,15 @@ import { ExternalComponentComponent } from './pages/external-component/external-
 import { NpmComponentComponent } from './pages/npm-component/npm-component.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoutingChildrenComponent } from './pages/routing-children/routing-children.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentRootComponent,
     ExternalComponentComponent,
-    NpmComponentComponent, 
+    NpmComponentComponent,
+    RoutingChildrenComponent, 
 
   ],
   imports: [
