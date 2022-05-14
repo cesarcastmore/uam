@@ -16,7 +16,7 @@ export class CategoryService {
   public getAllCategories(): Observable<any> {
 
     let params: HttpParams = new HttpParams().append('api_key', environment.apiKey)
-      .append('store_key', environment.apiStoreKey).append('start', 0).append('count', 100);
+      .append('store_key', environment.apiStoreKey).append('start', 0).append('count', 12);
 
 
    return this.http.get<any>(environment.url + "/category.list.json", { params })
