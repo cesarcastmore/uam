@@ -8,7 +8,7 @@
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories
                 </div>
                 <ul class="list-group category_block">
-                    <li *ngFor="let category of categories" class="list-group-item" [routerLink]="['/parametros-consulta']"
+                    <li *ngFor="let category of (categories$ | async)?.result?.category" class="list-group-item" [routerLink]="['/parametros-consulta']"
                         [queryParams]="{category: category.id}"><a>{{ category.name}}</a></li>
                   
                 </ul>

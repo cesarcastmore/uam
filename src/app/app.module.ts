@@ -17,6 +17,7 @@ import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { ObservableComponent } from './pages/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     HtmlComponent,
     CssComponent,
     JavascriptComponent,
-    RoutingQueryparamsComponent, 
+    RoutingQueryparamsComponent,
+    ObservableComponent, 
 
   ],
   imports: [

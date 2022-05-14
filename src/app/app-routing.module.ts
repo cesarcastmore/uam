@@ -10,6 +10,7 @@ import { HtmlComponent } from './pages/routing-children/html/html.component';
 import { CssComponent } from './pages/routing-children/css/css.component';
 import { JavascriptComponent } from './pages/routing-children/javascript/javascript.component';
 import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing-queryparams.component';
+import { ObservableComponent } from './pages/observable/observable.component';
 
 
 
@@ -39,10 +40,13 @@ const routes: Routes = [{
     path: 'javascript',
     component: JavascriptComponent
   }],
-},{
+}, {
   path: 'parametros-consulta',
   component: RoutingQueryparamsComponent
 
+}, {
+  path: 'observable',
+  component: ObservableComponent
 }
 
 

@@ -14,6 +14,8 @@ export class RoutingQueryparamsComponent implements OnInit {
   categories: any[]=[];
   products: any[]=[];
 
+  categories$: Observable<any>= new Observable<any>();
+
 
 
   constructor(private activedRoute: ActivatedRoute,
@@ -25,11 +27,12 @@ export class RoutingQueryparamsComponent implements OnInit {
     let category: string = this.activedRoute.snapshot.queryParams['category'];
     console.log(category);
 
-    let categories$: Observable<any>= this.categoryService.getAllCategories();
+    this.categories$= this.categoryService.getAllCategories();
 
+    /*let categories$: Observable<any>= this.categoryService.getAllCategories();
     categories$.subscribe(result=> {
       this.categories = result.result.category;
-    });
+    });*/
 
     let querParams$: Observable<any> = this.activedRoute.queryParams;
     querParams$.subscribe(params=> {
