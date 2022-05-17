@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Observer } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Observer, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-observable',
   templateUrl: './observable.component.html',
   styleUrls: ['./observable.component.css']
 })
-export class ObservableComponent implements OnInit {
+export class ObservableComponent implements OnInit, OnDestroy {
 
   sydney: number = 0;
-  montreal: number=0;
+  montreal: number = 0;
 
-  liverpool$: Observable<number>= new Observable<number>();
+  liverpool$: Observable<number> = new Observable<number>();
+
+  londres: number = 0;
+  londresSubscription: Subscription | undefined;
+
+
+  mexicoCity: number = 0;
 
   constructor() {
 
@@ -28,7 +34,25 @@ export class ObservableComponent implements OnInit {
       this.montreal = value;
     });
 
-    this.liverpool$= this.getObservableTime();
+    this.liverpool$ = this.getObservableTime();
+
+    this.londresSubscription = this.getObservableTime().subscribe(value => {
+      this.londres = value;
+    });
+
+    //Aqui estamos deteniendo el subscribe antes de que termine
+    /*setTimeout(() => {
+      this.londresSubscription?.unsubscribe();
+    }, 3000);*/
+
+
+    this.getObservableError().subscribe(
+      (value => {
+        this.mexicoCity = value;
+      }), ((error) => {
+        console.log(error);
+
+      }));
 
 
   }
@@ -56,18 +80,18 @@ export class ObservableComponent implements OnInit {
       observer.next(this.getRandom());
 
 
-      setTimeout(()=>{
+      setTimeout(() => {
         observer.next(this.getRandom());
 
       }, 2000);
 
-      setTimeout(()=>{
+      setTimeout(() => {
         observer.next(this.getRandom());
 
       }, 4000);
 
 
-      setTimeout(()=>{
+      setTimeout(() => {
         observer.complete();
 
       }, 6000);
@@ -76,6 +100,43 @@ export class ObservableComponent implements OnInit {
 
 
     });
+  }
+
+
+  //este observables es atraves del tiempo de
+  public getObservableError(): Observable<number> {
+    return Observable.create((observer: Observer<number>) => {
+
+      observer.next(this.getRandom());
+
+
+      setTimeout(() => {
+        observer.next(this.getRandom());
+
+      }, 2000);
+
+      setTimeout(() => {
+        observer.error("Se ha producido un error");
+
+      }, 4000);
+
+
+      setTimeout(() => {
+        observer.complete();
+
+      }, 6000);
+
+
+
+
+    });
+  }
+
+
+  public ngOnDestroy(): void {
+    console.log("Se destruyo el componente");
+    this.londresSubscription?.unsubscribe();
+
   }
 
 
