@@ -18,6 +18,8 @@ import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing
 
 import {HttpClientModule} from '@angular/common/http';
 import { ObservableComponent } from './pages/observable/observable.component';
+import { OperatorsComponent } from './pages/operators/operators.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ObservableComponent } from './pages/observable/observable.component';
     CssComponent,
     JavascriptComponent,
     RoutingQueryparamsComponent,
-    ObservableComponent, 
+    ObservableComponent,
+    OperatorsComponent, 
 
   ],
   imports: [
@@ -39,7 +42,8 @@ import { ObservableComponent } from './pages/observable/observable.component';
     AlertasModule,
     ModalModule.forRoot(),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

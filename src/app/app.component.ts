@@ -45,6 +45,9 @@ export class AppComponent {
       children: [{
         title: 'Contruir un Observable',
         path: 'observable'
+      }, {
+        title: 'Operadores',
+        path: 'operators'
       }]
     }
 

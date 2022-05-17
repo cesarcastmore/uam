@@ -12,6 +12,7 @@ import { JavascriptComponent } from './pages/routing-children/javascript/javascr
 import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing-queryparams.component';
 import { ObservableComponent } from './pages/observable/observable.component';
 
+import { OperatorsComponent } from './pages/operators/operators.component';
 
 
 const routes: Routes = [{
@@ -47,6 +48,9 @@ const routes: Routes = [{
 }, {
   path: 'observable',
   component: ObservableComponent
+}, {
+  path: 'operators',
+  component: OperatorsComponent
 }
 
 

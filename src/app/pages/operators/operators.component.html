@@ -1,0 +1,40 @@
+
+<div class="container py-5">
+
+    <div class="input-group mb-5" [formGroup]="formQuery">
+
+        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+            formControlName="query" aria-describedby="button-addon1" #searcher>
+
+    </div>
+
+    <div class="row pb-5 mb-4">
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" *ngFor="let movie of movies" >
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+                <div class="card-body p-0">
+                    <div class="bg-primary px-5 py-4 text-center card-img-top"><img
+                             alt="..."
+                            width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                        <h5 class="text-white mb-0">{{movie.original_title}}</h5>
+                        <p class="small text-white mb-0">{{movie.overview}}</p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <h5 class="font-weight-bold mb-0 d-block">241</h5><small class="text-muted"><i
+                                        class="fa fa-picture-o mr-1 text-primary"></i>Photos</small>
+                            </li>
+                            <li class="list-inline-item">
+                                <h5 class="font-weight-bold mb-0 d-block">{{movie.popularity}}</h5><small class="text-muted"><i
+                                        class="fa fa-user-circle-o mr-1 text-primary">{{movie.vote_average}}</i></small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
