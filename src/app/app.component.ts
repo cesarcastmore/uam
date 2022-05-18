@@ -48,6 +48,9 @@ export class AppComponent {
       }, {
         title: 'Operadores',
         path: 'operators'
+      }, {
+        title: 'Promesas',
+        path: 'promises'
       }]
     }
 

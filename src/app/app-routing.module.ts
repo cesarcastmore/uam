@@ -13,6 +13,7 @@ import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing
 import { ObservableComponent } from './pages/observable/observable.component';
 
 import { OperatorsComponent } from './pages/operators/operators.component';
+import { PromisesComponent } from './pages/promises/promises.component';
 
 
 const routes: Routes = [{
@@ -51,6 +52,9 @@ const routes: Routes = [{
 }, {
   path: 'operators',
   component: OperatorsComponent
+}, {
+  path: 'promises',
+  component: PromisesComponent
 }
 
 

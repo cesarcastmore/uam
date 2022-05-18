@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ObservableComponent } from './pages/observable/observable.component';
 import { OperatorsComponent } from './pages/operators/operators.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PromisesComponent } from './pages/promises/promises.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     JavascriptComponent,
     RoutingQueryparamsComponent,
     ObservableComponent,
-    OperatorsComponent, 
+    OperatorsComponent,
+    PromisesComponent, 
 
   ],
   imports: [
