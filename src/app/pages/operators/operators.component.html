@@ -10,12 +10,13 @@
 
     <div class="row pb-5 mb-4">
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" *ngFor="let movie of movies" >
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" *ngFor="let movie of (movies$ | async)" >
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
                 <div class="card-body p-0">
-                    <div class="bg-primary px-5 py-4 text-center card-img-top"><img
-                             alt="..."
+                    <div class="bg-primary px-5 py-4 text-center card-img-top">
+                        <img
+                             alt="..." [src]="movie.poster_path"
                             width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
                         <h5 class="text-white mb-0">{{movie.original_title}}</h5>
                         <p class="small text-white mb-0">{{movie.overview}}</p>
