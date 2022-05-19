@@ -51,6 +51,9 @@ export class AppComponent {
       }, {
         title: 'Promesas',
         path: 'promises'
+      },{
+        title: 'Operadores Join',
+        path: 'join-operators'
       }]
     }
 

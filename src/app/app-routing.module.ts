@@ -14,6 +14,7 @@ import { ObservableComponent } from './pages/observable/observable.component';
 
 import { OperatorsComponent } from './pages/operators/operators.component';
 import { PromisesComponent } from './pages/promises/promises.component';
+import { JoinOperatorsComponent } from './pages/join-operators/join-operators.component';
 
 
 const routes: Routes = [{
@@ -55,6 +56,9 @@ const routes: Routes = [{
 }, {
   path: 'promises',
   component: PromisesComponent
+}, {
+  path: 'join-operators',
+  component: JoinOperatorsComponent
 }
 
 
