@@ -22,6 +22,7 @@ import { OperatorsComponent } from './pages/operators/operators.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PromisesComponent } from './pages/promises/promises.component';
 import { JoinOperatorsComponent } from './pages/join-operators/join-operators.component';
+import { SubjectComponent } from './pages/subject/subject.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { JoinOperatorsComponent } from './pages/join-operators/join-operators.co
     ObservableComponent,
     OperatorsComponent,
     PromisesComponent,
-    JoinOperatorsComponent, 
+    JoinOperatorsComponent,
+    SubjectComponent, 
 
   ],
   imports: [

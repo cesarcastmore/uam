@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Menu } from './models/menu';
+import { AlertService} from 'src/app/services/alert.service';
+import { Observable } from 'rxjs';
+import {tap, distinctUntilChanged, distinctUntilKeyChanged, debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'uam';
 
   isOpen: boolean = true;
+
+  alert$:Observable<any> | undefined;
+
+
 
   public menus: Menu[] = [
     {
@@ -54,6 +61,9 @@ export class AppComponent {
       },{
         title: 'Operadores Join',
         path: 'join-operators'
+      },{
+        title: 'Subject',
+        path: 'subject'
       }]
     }
 
@@ -61,7 +71,20 @@ export class AppComponent {
   ];
 
 
-  constructor() {
+  constructor(private alertService: AlertService) {
+
+  }
+
+  ngOnInit(): void {
+
+    this.alert$ = this.alertService.alert.asObservable().pipe(
+      distinctUntilKeyChanged('message'),
+      debounceTime(500),
+      tap(value=> setTimeout(() => {
+        this.alertService.notify(null, '')
+      }, 2000)),
+
+    );
 
   }
 

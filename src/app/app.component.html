@@ -55,6 +55,13 @@
       </div>
     </nav>
     <div class="content-wrapper">
+
+      <ng-container *ngIf="(alert$ | async) as alert">
+        <div *ngIf="alert?.type"  class="alert alert-{{alert.type}}" role="alert" >
+          {{ alert.message}}
+        </div>
+      </ng-container>
+
       <router-outlet></router-outlet>
       <div class="line"></div>
     </div>
