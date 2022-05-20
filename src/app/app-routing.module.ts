@@ -17,6 +17,7 @@ import { PromisesComponent } from './pages/promises/promises.component';
 import { JoinOperatorsComponent } from './pages/join-operators/join-operators.component';
 import { SubjectComponent } from './pages/subject/subject.component';
 import { ContentComponent } from './pages/content/content.component';
+import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
 
 
 const routes: Routes = [{
@@ -67,6 +68,9 @@ const routes: Routes = [{
 },{
   path: 'content',
   component: ContentComponent
+}, {
+  path:'template-outlet',
+  component: TemplateOutletComponent
 }
 
 

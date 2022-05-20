@@ -71,6 +71,10 @@ export class AppComponent implements OnInit{
       children: [{
         title: 'Content',
         path:'content'
+      },
+      {
+        title: 'Template Outlet',
+        path:'template-outlet'
       }]
     }
 

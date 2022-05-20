@@ -25,6 +25,7 @@ import { JoinOperatorsComponent } from './pages/join-operators/join-operators.co
 import { SubjectComponent } from './pages/subject/subject.component';
 import { ContentComponent } from './pages/content/content.component';
 import { SharedModule } from './shared/shared.module';
+import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SharedModule } from './shared/shared.module';
     PromisesComponent,
     JoinOperatorsComponent,
     SubjectComponent,
-    ContentComponent, 
+    ContentComponent,
+    TemplateOutletComponent, 
 
   ],
   imports: [
