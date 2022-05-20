@@ -23,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PromisesComponent } from './pages/promises/promises.component';
 import { JoinOperatorsComponent } from './pages/join-operators/join-operators.component';
 import { SubjectComponent } from './pages/subject/subject.component';
+import { ContentComponent } from './pages/content/content.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { SubjectComponent } from './pages/subject/subject.component';
     OperatorsComponent,
     PromisesComponent,
     JoinOperatorsComponent,
-    SubjectComponent, 
+    SubjectComponent,
+    ContentComponent, 
 
   ],
   imports: [
@@ -49,7 +52,8 @@ import { SubjectComponent } from './pages/subject/subject.component';
     ModalModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

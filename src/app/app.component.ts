@@ -65,6 +65,13 @@ export class AppComponent implements OnInit{
         title: 'Subject',
         path: 'subject'
       }]
+    },{
+      title: 'Templates',
+      key: 'templates',
+      children: [{
+        title: 'Content',
+        path:'content'
+      }]
     }
 
 

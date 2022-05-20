@@ -1,0 +1,27 @@
+<main role="main" class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">
+                <ng-content select=".title_1"></ng-content>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <ng-content select=".title_2"></ng-content>
+
+            </li>
+        </ol>
+    </nav>
+
+    <div class="jumbotron">
+        <ng-content select=".header"></ng-content>
+
+    </div>
+
+    <ng-content select="hr"></ng-content>
+
+
+    <div class="jumbotron">
+        <ng-content select=".body"></ng-content>
+
+    </div>
+
+</main>
