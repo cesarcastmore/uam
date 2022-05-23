@@ -18,6 +18,7 @@ import { JoinOperatorsComponent } from './pages/join-operators/join-operators.co
 import { SubjectComponent } from './pages/subject/subject.component';
 import { ContentComponent } from './pages/content/content.component';
 import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
+import { ViewChildComponent } from './pages/view-child/view-child.component';
 
 
 const routes: Routes = [{
@@ -71,8 +72,10 @@ const routes: Routes = [{
 }, {
   path:'template-outlet',
   component: TemplateOutletComponent
+},{
+  path:'view-child',
+  component: ViewChildComponent
 }
-
 
 ];
 

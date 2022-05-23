@@ -75,6 +75,9 @@ export class AppComponent implements OnInit{
       {
         title: 'Template Outlet',
         path:'template-outlet'
+      },{
+        title: 'View Child',
+        path:'view-child'
       }]
     }
 

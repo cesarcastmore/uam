@@ -26,6 +26,8 @@ import { SubjectComponent } from './pages/subject/subject.component';
 import { ContentComponent } from './pages/content/content.component';
 import { SharedModule } from './shared/shared.module';
 import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
+import { ViewChildComponent } from './pages/view-child/view-child.component';
+import { TitleComponent } from './pages/view-child/title/title.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { TemplateOutletComponent } from './pages/template-outlet/template-outlet
     JoinOperatorsComponent,
     SubjectComponent,
     ContentComponent,
-    TemplateOutletComponent, 
+    TemplateOutletComponent,
+    ViewChildComponent,
+    TitleComponent, 
 
   ],
   imports: [
