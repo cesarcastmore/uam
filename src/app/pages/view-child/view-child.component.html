@@ -1,10 +1,15 @@
 <h6 #title>ViewChild</h6>
 <ul class="list-group">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
+  <li class="list-group-item" #listaElement *ngFor="let item of lista">{{item}}</li>
 
-  <app-title></app-title>
+</ul>
+
+<app-title></app-title>
+
+<button class="btn btn-success" (click)="cambiarColor()">Cambiar Color</button>
+<button class="btn btn-success" (click)="ponerBotones()">Poner Botones</button>
+
+<div class="row">
+    <app-card *ngFor="let card of listaCards"  [title]="card.title"
+      [description]="card.description"></app-card>
+</div>
