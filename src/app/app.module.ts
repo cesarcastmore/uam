@@ -28,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
 import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
 import { ViewChildComponent } from './pages/view-child/view-child.component';
 import { TitleComponent } from './pages/view-child/title/title.component';
+import { CardComponent } from './pages/view-child/card/card.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { TitleComponent } from './pages/view-child/title/title.component';
     ContentComponent,
     TemplateOutletComponent,
     ViewChildComponent,
-    TitleComponent, 
+    TitleComponent,
+    CardComponent, 
 
   ],
   imports: [
