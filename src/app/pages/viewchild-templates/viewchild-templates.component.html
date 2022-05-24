@@ -1,0 +1,32 @@
+<app-template-ng-container *ngFor="let alert of alertas" [title]="alert.title" [template]="alert.template">
+    
+</app-template-ng-container>
+
+<app-template-ng-container title="primary" [template]="primary"></app-template-ng-container>
+
+
+<ng-template #primary>
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+</ng-template>
+
+
+<ng-template #success>
+    <div class="alert alert-success" role="alert">
+        A simple primary alert—check it out!
+    </div>
+</ng-template>
+
+
+<ng-template #danger>
+    <div class="alert alert-danger" role="alert">
+        A simple primary alert—check it out!
+    </div>
+</ng-template>
+
+<ng-template #info>
+    <div class="alert alert-info" role="alert">
+        A simple primary alert—check it out!
+    </div>
+</ng-template>
