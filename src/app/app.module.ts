@@ -29,6 +29,11 @@ import { TemplateOutletComponent } from './pages/template-outlet/template-outlet
 import { ViewChildComponent } from './pages/view-child/view-child.component';
 import { TitleComponent } from './pages/view-child/title/title.component';
 import { CardComponent } from './pages/view-child/card/card.component';
+import { ViewchildTemplatesComponent } from './pages/viewchild-templates/viewchild-templates.component';
+import { TemplateNgContainerComponent } from './pages/viewchild-templates/template-ng-container/template-ng-container.component';
+import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
+import { ProductoComponent } from './pages/dynamic-components/producto/producto.component';
+import { UsuarioComponent } from './pages/dynamic-components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,12 @@ import { CardComponent } from './pages/view-child/card/card.component';
     TemplateOutletComponent,
     ViewChildComponent,
     TitleComponent,
-    CardComponent, 
+    CardComponent,
+    ViewchildTemplatesComponent,
+    TemplateNgContainerComponent,
+    DynamicComponentsComponent,
+    ProductoComponent,
+    UsuarioComponent, 
 
   ],
   imports: [

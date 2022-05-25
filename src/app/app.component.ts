@@ -78,6 +78,12 @@ export class AppComponent implements OnInit{
       },{
         title: 'View Child',
         path:'view-child'
+      },{
+        title: 'ViewChild template',
+        path:'viewchild-template'
+      },{
+        title: 'Componentes Dinamicos',
+        path:'dynamic-component'
       }]
     }
 

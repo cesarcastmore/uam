@@ -19,6 +19,8 @@ import { SubjectComponent } from './pages/subject/subject.component';
 import { ContentComponent } from './pages/content/content.component';
 import { TemplateOutletComponent } from './pages/template-outlet/template-outlet.component';
 import { ViewChildComponent } from './pages/view-child/view-child.component';
+import { ViewchildTemplatesComponent } from './pages/viewchild-templates/viewchild-templates.component';
+import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
 
 
 const routes: Routes = [{
@@ -75,6 +77,12 @@ const routes: Routes = [{
 },{
   path:'view-child',
   component: ViewChildComponent
+},{
+  path: 'viewchild-template',
+  component: ViewchildTemplatesComponent
+},{
+  path:'dynamic-component',
+  component: DynamicComponentsComponent
 }
 
 ];
