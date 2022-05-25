@@ -34,6 +34,7 @@ import { TemplateNgContainerComponent } from './pages/viewchild-templates/templa
 import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
 import { ProductoComponent } from './pages/dynamic-components/producto/producto.component';
 import { UsuarioComponent } from './pages/dynamic-components/usuario/usuario.component';
+import { OnPushComponent } from './pages/on-push/on-push.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { UsuarioComponent } from './pages/dynamic-components/usuario/usuario.com
     TemplateNgContainerComponent,
     DynamicComponentsComponent,
     ProductoComponent,
-    UsuarioComponent, 
+    UsuarioComponent,
+    OnPushComponent, 
 
   ],
   imports: [

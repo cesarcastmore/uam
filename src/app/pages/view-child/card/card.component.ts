@@ -27,4 +27,8 @@ export class CardComponent implements OnInit {
     this.header= header;
   }
 
+  print(){
+    console.log("estoy imprimiendo", this.header);
+  }
+
 }

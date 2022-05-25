@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './models/menu';
-import { AlertService} from 'src/app/services/alert.service';
+import { AlertService } from 'src/app/services/alert.service';
 import { Observable } from 'rxjs';
-import {tap, distinctUntilChanged, distinctUntilKeyChanged, debounceTime } from 'rxjs/operators';
+import { tap, distinctUntilChanged, distinctUntilKeyChanged, debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'uam';
 
   isOpen: boolean = true;
 
-  alert$:Observable<any> | undefined;
+  alert$: Observable<any> | undefined;
 
 
 
@@ -58,32 +58,39 @@ export class AppComponent implements OnInit{
       }, {
         title: 'Promesas',
         path: 'promises'
-      },{
+      }, {
         title: 'Operadores Join',
         path: 'join-operators'
-      },{
+      }, {
         title: 'Subject',
         path: 'subject'
       }]
-    },{
+    }, {
       title: 'Templates',
       key: 'templates',
       children: [{
         title: 'Content',
-        path:'content'
+        path: 'content'
       },
       {
         title: 'Template Outlet',
-        path:'template-outlet'
-      },{
+        path: 'template-outlet'
+      }, {
         title: 'View Child',
-        path:'view-child'
-      },{
+        path: 'view-child'
+      }, {
         title: 'ViewChild template',
-        path:'viewchild-template'
-      },{
+        path: 'viewchild-template'
+      }, {
         title: 'Componentes Dinamicos',
-        path:'dynamic-component'
+        path: 'dynamic-component'
+      }]
+    }, {
+      title: 'Change Detenction',
+      key: 'detenction',
+      children: [{
+        title: 'On Push',
+        path: 'on-push'
       }]
     }
 
@@ -100,7 +107,7 @@ export class AppComponent implements OnInit{
     this.alert$ = this.alertService.alert.asObservable().pipe(
       distinctUntilKeyChanged('message'),
       debounceTime(500),
-      tap(value=> setTimeout(() => {
+      tap(value => setTimeout(() => {
         this.alertService.notify(null, '')
       }, 2000)),
 

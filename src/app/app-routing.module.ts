@@ -21,6 +21,7 @@ import { TemplateOutletComponent } from './pages/template-outlet/template-outlet
 import { ViewChildComponent } from './pages/view-child/view-child.component';
 import { ViewchildTemplatesComponent } from './pages/viewchild-templates/viewchild-templates.component';
 import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
+import { OnPushComponent } from './pages/on-push/on-push.component';
 
 
 const routes: Routes = [{
@@ -83,6 +84,9 @@ const routes: Routes = [{
 },{
   path:'dynamic-component',
   component: DynamicComponentsComponent
+},{
+  path: 'on-push',
+  component: OnPushComponent
 }
 
 ];
