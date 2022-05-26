@@ -20,6 +20,7 @@ export class OnPushComponent implements OnInit {
   cambiarCard1(){
 
     this.cards.card1= { header: 'HEADER1', title: 'TITLE1', description: 'DESCRIPTION1' };
+    this.cards.card1= {...this.cards.card1, card1:{ header: 'HEADER1', title: 'TITLE1', description: 'DESCRIPTION1' }};
 
   }
 
