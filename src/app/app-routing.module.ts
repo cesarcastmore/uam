@@ -22,6 +22,7 @@ import { ViewChildComponent } from './pages/view-child/view-child.component';
 import { ViewchildTemplatesComponent } from './pages/viewchild-templates/viewchild-templates.component';
 import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
 import { OnPushComponent } from './pages/on-push/on-push.component';
+import { ChangeDetectorComponent } from './pages/change-detector/change-detector.component';
 
 
 const routes: Routes = [{
@@ -87,6 +88,9 @@ const routes: Routes = [{
 },{
   path: 'on-push',
   component: OnPushComponent
+},{
+  path: 'change-detector',
+  component: ChangeDetectorComponent
 }
 
 ];

@@ -91,6 +91,9 @@ export class AppComponent implements OnInit {
       children: [{
         title: 'On Push',
         path: 'on-push'
+      },{
+        title: 'Change Detector Ref',
+        path: 'change-detector'
       }]
     }
 
