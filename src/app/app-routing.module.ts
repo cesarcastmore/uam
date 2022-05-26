@@ -23,6 +23,7 @@ import { ViewchildTemplatesComponent } from './pages/viewchild-templates/viewchi
 import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-components.component';
 import { OnPushComponent } from './pages/on-push/on-push.component';
 import { ChangeDetectorComponent } from './pages/change-detector/change-detector.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [{
@@ -91,6 +92,9 @@ const routes: Routes = [{
 },{
   path: 'change-detector',
   component: ChangeDetectorComponent
+},{
+  path:'login',
+  component: LoginComponent
 }
 
 ];
