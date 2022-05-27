@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+
+  public token: string | null = '';
+
+  public is_active: Subject<boolean> = new Subject<boolean>();
 
   constructor(private http: HttpClient) {
 
@@ -22,13 +27,44 @@ export class AuthService {
       pipe(map(resultado => {
 
         if (resultado.success) {
-          sessionStorage.setItem('token', resultado.token);
-          //localStorage.setItem('token', resultado.token);
+          localStorage.setItem('token', resultado.token);
+          this.token = resultado.token;
+
+
         }
 
         return resultado;
 
       }));
+
+  }
+
+
+  public validateToken(): Observable<boolean> {
+
+    let token = localStorage.getItem('token');
+
+
+    //Consultando un servicio para validar el token
+
+    if (token !== null) {
+      this.token = token;
+      this.is_active.next(true);
+      return of(true);
+    } else {
+      this.is_active.next(false);
+      this.token = null;
+      return of(false);
+
+    }
+
+
+
+
+
+
+
+
 
   }
 }

@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
         
         
         if(result.success){
-          //this.router.navigate(['/routing_params/posts']);
+          this.router.navigate(['/profile']);
         }else {
           //practica, colocar el notificador de rojo que esta en el componente de carrito
         }

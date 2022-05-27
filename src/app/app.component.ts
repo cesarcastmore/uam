@@ -3,7 +3,7 @@ import { Menu } from './models/menu';
 import { AlertService } from 'src/app/services/alert.service';
 import { Observable } from 'rxjs';
 import { tap, distinctUntilChanged, distinctUntilKeyChanged, debounceTime } from 'rxjs/operators';
-
+import {AuthService} from 'src/app/services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -101,11 +101,13 @@ export class AppComponent implements OnInit {
   ];
 
 
-  constructor(private alertService: AlertService) {
+  constructor(private alertService: AlertService, private authService: AuthService) {
 
   }
 
   ngOnInit(): void {
+
+    //this.authService.validateToken();
 
     this.alert$ = this.alertService.alert.asObservable().pipe(
       distinctUntilKeyChanged('message'),

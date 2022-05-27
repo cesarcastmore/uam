@@ -37,6 +37,7 @@ import { UsuarioComponent } from './pages/dynamic-components/usuario/usuario.com
 import { OnPushComponent } from './pages/on-push/on-push.component';
 import { ChangeDetectorComponent } from './pages/change-detector/change-detector.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { LoginComponent } from './pages/login/login.component';
     OnPushComponent,
     ChangeDetectorComponent,
     LoginComponent,
+    ProfileComponent,
 
   ],
   imports: [

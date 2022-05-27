@@ -24,6 +24,9 @@ import { DynamicComponentsComponent } from './pages/dynamic-components/dynamic-c
 import { OnPushComponent } from './pages/on-push/on-push.component';
 import { ChangeDetectorComponent } from './pages/change-detector/change-detector.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+
+import {AuthGuard} from './guards/auth.guard';
 
 
 const routes: Routes = [{
@@ -38,10 +41,12 @@ const routes: Routes = [{
 },
 {
   path: 'lazy-loading',
+  canLoad: [AuthGuard],
   loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)
 }, {
   path: 'rutas-anidadas',
   component: RoutingChildrenComponent,
+  canActivateChild: [AuthGuard],
   children: [{
     path: 'html',
     component: HtmlComponent
@@ -95,6 +100,10 @@ const routes: Routes = [{
 },{
   path:'login',
   component: LoginComponent
+}, {
+  path: 'profile',
+  component: ProfileComponent,
+  canActivate: [AuthGuard]
 }
 
 ];
