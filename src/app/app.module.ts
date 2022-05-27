@@ -38,6 +38,8 @@ import { OnPushComponent } from './pages/on-push/on-push.component';
 import { ChangeDetectorComponent } from './pages/change-detector/change-detector.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
+import { ChildEncapsulationComponent } from './pages/encapsulation/child-encapsulation/child-encapsulation.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ChangeDetectorComponent,
     LoginComponent,
     ProfileComponent,
+    EncapsulationComponent,
+    ChildEncapsulationComponent,
 
   ],
   imports: [

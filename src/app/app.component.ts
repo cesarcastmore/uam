@@ -3,7 +3,7 @@ import { Menu } from './models/menu';
 import { AlertService } from 'src/app/services/alert.service';
 import { Observable } from 'rxjs';
 import { tap, distinctUntilChanged, distinctUntilKeyChanged, debounceTime } from 'rxjs/operators';
-import {AuthService} from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -91,10 +91,13 @@ export class AppComponent implements OnInit {
       children: [{
         title: 'On Push',
         path: 'on-push'
-      },{
+      }, {
         title: 'Change Detector Ref',
         path: 'change-detector'
       }]
+    }, {
+      title: 'Encapsulation',
+      path: 'encapsulation'
     }
 
 

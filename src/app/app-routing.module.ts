@@ -27,6 +27,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 import {AuthGuard} from './guards/auth.guard';
+import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
 
 
 const routes: Routes = [{
@@ -104,6 +105,9 @@ const routes: Routes = [{
   path: 'profile',
   component: ProfileComponent,
   canActivate: [AuthGuard]
+},{
+  path: 'encapsulation',
+  component:EncapsulationComponent
 }
 
 ];
