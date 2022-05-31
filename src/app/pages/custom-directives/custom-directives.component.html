@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of listService.list[0]" appDrag draggable="true" [item]="item"
+                [no]="0">{{item.name}}</li>
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of listService.list[1]" appDrag draggable="true" [item]="item"
+                [no]="1">{{item.name}}</li>
+        </ul>
+    </div>
+</div>

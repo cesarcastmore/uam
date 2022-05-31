@@ -98,6 +98,9 @@ export class AppComponent implements OnInit {
     }, {
       title: 'Encapsulation',
       path: 'encapsulation'
+    }, {
+      title: 'Directivas Customizadas',
+      path: 'custom-directives'
     }
 
 

@@ -29,6 +29,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import {AuthGuard} from './guards/auth.guard';
 import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
 import { ProfileResolver } from './resolvers/profile.resolver';
+import { CustomDirectivesComponent } from './pages/custom-directives/custom-directives.component';
 
 
 const routes: Routes = [{
@@ -112,6 +113,9 @@ const routes: Routes = [{
 },{
   path: 'encapsulation',
   component:EncapsulationComponent
+},{
+  path: 'custom-directives',
+  component:CustomDirectivesComponent
 }
 
 ];

@@ -43,6 +43,8 @@ import { ChildEncapsulationComponent } from './pages/encapsulation/child-encapsu
 
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { CustomDirectivesComponent } from './pages/custom-directives/custom-directives.component';
+import { DragDirective } from './directives/drag.directive';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ProfileComponent,
     EncapsulationComponent,
     ChildEncapsulationComponent,
+    CustomDirectivesComponent,
+    DragDirective,
 
   ],
   imports: [
