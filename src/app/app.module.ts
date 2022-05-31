@@ -41,6 +41,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
 import { ChildEncapsulationComponent } from './pages/encapsulation/child-encapsulation/child-encapsulation.component';
 
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +88,11 @@ import { ChildEncapsulationComponent } from './pages/encapsulation/child-encapsu
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

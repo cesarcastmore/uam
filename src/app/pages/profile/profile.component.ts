@@ -21,8 +21,7 @@ export class ProfileComponent implements OnInit {
         let token: string | null = this.auth.token;
         let httpHeaders: HttpHeaders = new HttpHeaders().set('Authorization', 'Bearer ' + token);
 
-        this.http.get<any>('https://99clb5k89d.execute-api.us-east-1.amazonaws.com/test/profile',
-          { headers: httpHeaders }).subscribe(value => {
+        this.http.get<any>('https://99clb5k89d.execute-api.us-east-1.amazonaws.com/test/profile').subscribe(value => {
             this.profile = value;
           })
      /* }
