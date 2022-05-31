@@ -28,6 +28,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 
 import {AuthGuard} from './guards/auth.guard';
 import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
+import { ProfileResolver } from './resolvers/profile.resolver';
 
 
 const routes: Routes = [{
@@ -104,7 +105,10 @@ const routes: Routes = [{
 }, {
   path: 'profile',
   component: ProfileComponent,
-  canActivate: [AuthGuard]
+  canActivate: [AuthGuard], 
+  resolve: {
+    profile: ProfileResolver
+  }
 },{
   path: 'encapsulation',
   component:EncapsulationComponent
