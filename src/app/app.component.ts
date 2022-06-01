@@ -101,6 +101,13 @@ export class AppComponent implements OnInit {
     }, {
       title: 'Directivas Customizadas',
       path: 'custom-directives'
+    },{
+      title: 'Redux',
+      key:'redux',
+      children:[{
+        title: 'loading-redux',
+        path:'loading_redux'
+      }]
     }
 
 

@@ -30,6 +30,7 @@ import {AuthGuard} from './guards/auth.guard';
 import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
 import { ProfileResolver } from './resolvers/profile.resolver';
 import { CustomDirectivesComponent } from './pages/custom-directives/custom-directives.component';
+import { LoadingReduxComponent } from './pages/loading-redux/loading-redux.component';
 
 
 const routes: Routes = [{
@@ -116,6 +117,9 @@ const routes: Routes = [{
 },{
   path: 'custom-directives',
   component:CustomDirectivesComponent
+},{
+  path:'loading_redux',
+  component:LoadingReduxComponent
 }
 
 ];

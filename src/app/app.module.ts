@@ -16,7 +16,7 @@ import { JavascriptComponent } from './pages/routing-children/javascript/javascr
 import { RoutingQueryparamsComponent } from './pages/routing-queryparams/routing-queryparams.component';
 
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ObservableComponent } from './pages/observable/observable.component';
 import { OperatorsComponent } from './pages/operators/operators.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -41,11 +41,19 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { EncapsulationComponent } from './pages/encapsulation/encapsulation.component';
 import { ChildEncapsulationComponent } from './pages/encapsulation/child-encapsulation/child-encapsulation.component';
 
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { CustomDirectivesComponent } from './pages/custom-directives/custom-directives.component';
 import { DragDirective } from './directives/drag.directive';
 import { DropDirective } from './directives/drop.directive';
+import { StoreModule } from '@ngrx/store';
+import { storeReducer } from './store/store.reducer';
+import { LoadingReduxComponent } from './pages/loading-redux/loading-redux.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { LoadingEffects } from './store/loading.effects';
+
 
 @NgModule({
   declarations: [
@@ -82,6 +90,7 @@ import { DropDirective } from './directives/drop.directive';
     CustomDirectivesComponent,
     DragDirective,
     DropDirective,
+    LoadingReduxComponent,
 
   ],
   imports: [
@@ -92,11 +101,14 @@ import { DropDirective } from './directives/drop.directive';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forRoot({ is_loading: storeReducer }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([LoadingEffects])
   ],
   providers: [{
-    provide:HTTP_INTERCEPTORS,
-    useClass:AuthInterceptor,
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
     multi: true
   }],
   bootstrap: [AppComponent]
