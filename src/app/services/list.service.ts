@@ -65,7 +65,7 @@ export class ListService {
   }
 
 //Es cuando se suelta
-  public add(no: number) {
+  public add(no: number ) {
     this.list[no].push(this.dragging.item);
     this.list = _.cloneDeep(this.list);
 

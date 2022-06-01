@@ -38,9 +38,14 @@ export class DragDirective {
   @HostListener('drag')
   onDrag(){
     this.listService.isDragging(this.no, this.item);
-    this.listService.remove();
+    
 
+  }
 
+  @HostListener('mouseout')
+  onMouseOut(){
+    this.backgroundColor = 'transparent';
+    this.isSelected=false;
   }
 
 }
