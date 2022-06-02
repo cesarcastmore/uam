@@ -47,12 +47,12 @@ import { CustomDirectivesComponent } from './pages/custom-directives/custom-dire
 import { DragDirective } from './directives/drag.directive';
 import { DropDirective } from './directives/drop.directive';
 import { StoreModule } from '@ngrx/store';
-import { storeReducer } from './store/store.reducer';
+import { loadingReducer, usersReducer } from './store/store.reducer';
 import { LoadingReduxComponent } from './pages/loading-redux/loading-redux.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { LoadingEffects } from './store/loading.effects';
+import { LoadingEffects, UsersEffects } from './store/store.effects';
 
 
 @NgModule({
@@ -102,9 +102,9 @@ import { LoadingEffects } from './store/loading.effects';
     HttpClientModule,
     ReactiveFormsModule,
     SharedModule,
-    StoreModule.forRoot({ is_loading: storeReducer }),
+    StoreModule.forRoot({ is_loading: loadingReducer, users: usersReducer }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([LoadingEffects])
+    EffectsModule.forRoot([LoadingEffects, UsersEffects])
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
